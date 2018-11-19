@@ -56,6 +56,7 @@ var selectedAns = 0;
 var numOfCorrAns = 0;
 var numOfWrongAns = 0;
 var NumOfUnans = 0;
+$("#restart-btn").hide();
 
 
 //  The decrement function for interval timer
@@ -81,6 +82,7 @@ function decrement(k) {
 function resetDiv() {
     $(".ques-div").empty();
     $(".exmp-div").empty();
+    $("#restart-btn").hide();
 };
 function resetTimer() {
     clearInterval(intervalId);
@@ -125,7 +127,8 @@ function retriveQues(i) {
         $(".ques-div").append("Incorrect Answer: " + numOfWrongAns + "<br>");
         $(".ques-div").append("Unanswered: " + NumOfUnans + "<br>");
 
-        $(".ques-div").append("<button id='start-btn'>Start Over?</button>");
+        // $(".ques-div").append("<button id='start-btn'>Start Over?</button>");
+        $("#restart-btn").show();
     }
     else {
 
@@ -169,7 +172,7 @@ $(".exmp").on("click", function () {
 });
 
 // restart
-$("#start-btn").on("click", function () {
+$("#restart-btn").on("click", function () {
     console.log("click start button.")
     retriveQues(0);
 });

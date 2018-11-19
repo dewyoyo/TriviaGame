@@ -377,15 +377,16 @@ body {
 }
 
 h4:hover {
-border: dashed 5px #DAA520;
-background-color: #cccccc;
+border: dashed 5px #dddddd;
+background: #4aaaa5;
+color: #ffffff;
 }
 
 #remaining-time {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   font-size: 22pt;
-  color: blue
+  /* color: blue */
 }
 .ques-div{
   font-family: 'Times New Roman', Times, serif;
